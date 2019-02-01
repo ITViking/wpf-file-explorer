@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/folder.svg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("directory/directorystructure.c")]
 
 

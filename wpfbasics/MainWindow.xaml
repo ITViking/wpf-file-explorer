@@ -4,39 +4,34 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfBasics"
-        Loaded="Window_Loaded"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800" Background="Black">
 
     <Border BorderBrush="DarkGray">
         <Grid>
-            <TreeView x:Name="Folderview" Background="Black">
-                <TreeView.Resources>
+            <TreeView x:Name="Folderview" ItemsSource="{Binding Items}" Background="Black">
+                <TreeView.ItemContainerStyle>
                     <Style TargetType="{x:Type TreeViewItem}">
                         <Setter Property="Foreground" Value="LightCyan" />
-                        <Setter Property="HeaderTemplate">
-                            <Setter.Value>
-                                <DataTemplate>
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Width="25" Margin="3" 
+                        <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                    </Style>
+                </TreeView.ItemContainerStyle>
+
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="25" Margin="3" 
                                         Source="{
-                                            Binding RelativeSource={
-                                                RelativeSource Mode=FindAncestor, 
-                                                AncestorType={x:Type TreeViewItem}
-                                            }, 
-                                            Path=Tag, 
+                                            Binding Type,
                                             Converter={
                                                 x:Static local:HeaderToImageConverter.Instance
                                             }
                                         }" 
                                     />
-                                        <TextBlock  VerticalAlignment="Center" Text="{Binding}" />
-                                    </StackPanel>
-                                </DataTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </TreeView.Resources>
+                            <TextBlock  VerticalAlignment="Center" Text="{Binding Name}" />
+                        </StackPanel>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
             </TreeView>
         </Grid>
     </Border>

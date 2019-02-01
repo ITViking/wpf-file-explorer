@@ -14,7 +14,7 @@ namespace WpfBasics
     /// Converts a fullpath to a specific image of type drive, folder or file
     /// </summary>
     /// 
-    [ValueConversion(typeof(string),typeof(BitmapImage))]
+    [ValueConversion(typeof(DirectoryItemType),typeof(BitmapImage))]
     public class HeaderToImageConverter : IValueConverter
     {
 
@@ -22,24 +22,16 @@ namespace WpfBasics
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var path = (string)value;
-
-            if (path == null)
-            {
-                return null;
-            }
-
-            var name = MainWindow.GetFilesFoldersName(path);
-
             var image = "Images/file.png";
 
-            if (string.IsNullOrEmpty(name))
+            switch ((DirectoryItemType)value)
             {
-                image = "Images/drive.png";
-            }
-            else if (new FileInfo(path).Attributes.HasFlag(FileAttributes.Directory))
-            {
-                image = "Images/folder.png";
+                case DirectoryItemType.Drive:
+                    image = "Images/drive.png";
+                    break;
+                case DirectoryItemType.Folder:
+                    image = "Images/folder.png";
+                    break;
             }
 
             return new BitmapImage(new Uri($"pack://application:,,,/{image}"));

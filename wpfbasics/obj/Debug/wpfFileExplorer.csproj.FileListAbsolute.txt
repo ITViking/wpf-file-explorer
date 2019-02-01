@@ -15,7 +15,6 @@ C:\Users\Phil\source\repos\WpfBasics\WpfBasics\obj\Debug\WpfBasics.pdb
 C:\Users\Phil\source\repos\WpfFileExplorer\WpfBasics\bin\Debug\WpfBasics.exe.config
 C:\Users\Phil\source\repos\WpfFileExplorer\WpfBasics\bin\Debug\WpfBasics.exe
 C:\Users\Phil\source\repos\WpfFileExplorer\WpfBasics\bin\Debug\WpfBasics.pdb
-C:\Users\Phil\source\repos\WpfFileExplorer\WpfBasics\obj\Debug\wpfFileExplorer.csprojAssemblyReference.cache
 C:\Users\Phil\source\repos\WpfFileExplorer\WpfBasics\obj\Debug\MainWindow.g.cs
 C:\Users\Phil\source\repos\WpfFileExplorer\WpfBasics\obj\Debug\App.g.cs
 C:\Users\Phil\source\repos\WpfFileExplorer\WpfBasics\obj\Debug\WpfBasics_MarkupCompile.cache
@@ -27,3 +26,4 @@ C:\Users\Phil\source\repos\WpfFileExplorer\WpfBasics\obj\Debug\wpfFileExplorer.c
 C:\Users\Phil\source\repos\WpfFileExplorer\WpfBasics\obj\Debug\wpfFileExplorer.csproj.CoreCompileInputs.cache
 C:\Users\Phil\source\repos\WpfFileExplorer\WpfBasics\obj\Debug\WpfBasics.exe
 C:\Users\Phil\source\repos\WpfFileExplorer\WpfBasics\obj\Debug\WpfBasics.pdb
+C:\Users\Phil\source\repos\WpfFileExplorer\WpfBasics\obj\Debug\wpfFileExplorer.csprojAssemblyReference.cache
